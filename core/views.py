@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+from core.models import Book
+from core.forms import BookForm
+
 def index(request):
-    context = {}
+    context = {'form': BookForm()}
     return render(request, 'index.html', context)
